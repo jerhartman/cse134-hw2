@@ -6,11 +6,6 @@
         <link rel="stylesheet" href="styles/style.css">
         <script src="scripts/script.js"></script>
         <title>Jeremy's portfolio</title>
-        <style>
-            nav li {
-                display: inline;
-            }
-        </style>
     </head>
     <body>
         <header>
@@ -28,8 +23,10 @@
         <br>
         <main>
             <section id="home">
-                <h1 id="home-header">Hi, I'm Jeremy</h1>
-                <p id="home-paragraph">Web developer in training</p>
+                <div id="introduction-text-home">
+                    <h1 id="home-header">Hi, I'm Jeremy</h1>
+                    <p id="home-paragraph">Web developer in training</p>
+                </div>
                 <picture>
                     <source media="(min-width:600px)" srcset="images/me2.webp">
                     <img src="images/me.webp" alt="Photo of Jeremy">
@@ -39,10 +36,12 @@
             <!-- in about, include education, skills, certifications -->
             <section id="about">
                 <h2>About Me</h2>
-
-
-                
+                <p>I am currently a 4th-year UCSD student ready to enter the software development industry.</p>
                 <table>
+                    <caption>Relavent coursework</caption>
+                    <colgroup>
+                        <col span="5" style="background-color: lightblue;">
+                    </colgroup>
                     <tr>
                         <th>Spring 2021</th>
                         <th>Fall 2021</th>
@@ -65,23 +64,46 @@
                         <td>CSE 152A</td>
                     </tr>
                 </table>
-
-                <template>
-                    
-                </template>
-
-
             </section>
             <br>
             <!-- in work, put past jobs and projects -->
             <section id="work">
                 <h3>Work History</h3>
-                <h4>Skills</h4>
+                <template id="job-template">
+                    <p class="job-title"></p>
+                    <p class="job-location"></p>
+                    <ul class="job-responsibilities"></ul>
+                </template>
+                <h4>Technical Skills</h4>
+                <ol id="skills-ol">
+                    <li>Proficient in C/C++, Java, Python</li>
+                    <li>Web client languages: HTML, CSS, JavaScript</li>
+                    <li>GIT version control</li>
+                    <li>Linux-based opperating systems</li>
+                    <li>Software development methods: Agile and Scrum</li>
+                </ol>
             </section>
             <br>
             <!-- demos is for playing around and experimenting -->
             <section id="demos">
                 <h5>Demos and Experiments</h5>
+                <p>
+                    The following demo is a project I have been working on for the last month (give or take).
+                    I created a <b>convolutional neural network</b> that analyzes pictures of code and generates an
+                    audio file in response. <em>This is still a work in progress!</em>
+                </p>
+                <figure>
+                    <audio controls>
+                        <source src="audio/bruh.mp3" type="audio/mp3">
+                    </audio>
+                    <figcaption><strong>Audio output from my CNN</strong></figcaption>
+                </figure>
+                <aside id="code-aside">
+                    <p>Here is a <i>cricual</i> snippit of code from my CNN</p>
+                    <code>
+                        log("hello there :D")
+                    </code>
+                </aside>
             </section>
             <br>
             <!-- include a contact form here -->
@@ -99,10 +121,12 @@
                         <label for="form-reference">How did you find me?</label>
                         <select name="reference" id="form-reference">
                             <option value="">not selected</option>
-                            <option value="social-media">Social Media</option>
-                            <option value="past-employer">Past Employer</option>
-                            <option value="search-engine">Search Engine</option>
-                            <option value="word-of-mouth">Word of Mouth</option>
+                            <optgroup label="Social Media">
+                                <option value="social-media">LinkedIn</option>
+                                <option value="past-employer">Twitter</option>
+                                <option value="search-engine">Handshake</option>
+                                <option value="word-of-mouth">TikTok</option>
+                            </optgroup>
                             <option value="other">Other</option>
                         </select>
                     </fieldset>
@@ -135,6 +159,12 @@
                     <li><a href="https://www.linkedin.com/in/jeremy-hartman-678706251/" target="_blank">LinkedIn</a></li>
                 </ul>
             </nav>
+            <figure>
+                <video controls width="300" height="200">
+                    <source src="video/bruh.mp4" type="video/mp4">
+                </video>
+                <figcaption><strong>the TA grading my website be like</strong></figcaption>
+            </figure>
         </footer>
     </body>
 </html>
