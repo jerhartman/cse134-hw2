@@ -12,7 +12,6 @@
             }
         </style>
     </head>
-
     <body>
         <header>
             <nav id="main-nav">
@@ -22,13 +21,109 @@
                     <li><a href="#work">Work</a></li>
                     <li><a href="#demos">Demos</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                 </ul>
             </nav>
         </header>
         <br>
         <main>
-            main content here
+            <section id="home">
+                <h1 id="home-header">Hi, I'm Jeremy</h1>
+                <p id="home-paragraph">Web developer in training</p>
+                <picture>
+                    <source media="(min-width:600px)" srcset="images/me2.webp">
+                    <img src="images/me.webp" alt="Photo of Jeremy">
+                </picture>
+            </section>
+            <br>
+            <!-- in about, include education, skills, certifications -->
+            <section id="about">
+                <h2>About Me</h2>
+
+
+                
+                <table>
+                    <tr>
+                        <th>Spring 2021</th>
+                        <th>Fall 2021</th>
+                        <th>Winter 2022</th>
+                        <th>Spring 2023</th>
+                        <th>Fall 2022</th>
+                    </tr>
+                    <tr>
+                        <td>CSE 100</td>
+                        <td>CSE 101</td>
+                        <td>CSE 120</td>
+                        <td>CSE 130</td>
+                        <td>CSE 127</td>
+                    </tr>
+                    <tr>
+                        <td>CSE 105</td>
+                        <td>CSE 110</td>
+                        <td>CSE 140</td>
+                        <td>CSE 141</td>
+                        <td>CSE 152A</td>
+                    </tr>
+                </table>
+
+                <template>
+                    
+                </template>
+
+
+            </section>
+            <br>
+            <!-- in work, put past jobs and projects -->
+            <section id="work">
+                <h3>Work History</h3>
+                <h4>Skills</h4>
+            </section>
+            <br>
+            <!-- demos is for playing around and experimenting -->
+            <section id="demos">
+                <h5>Demos and Experiments</h5>
+            </section>
+            <br>
+            <!-- include a contact form here -->
+            <section id="contact">
+                <h6>Let's Connect</h6>
+                <form action="scripts/submitform.php" method="post">
+                    <fieldset id="personal-into-fs">
+                        <legend>Personal Info</legend>
+                        <label for="form-name">Name:</label>
+                        <input type="text" name="name" id="form-name">
+                        <br>
+                        <label for="form-email">Email:</label>
+                        <input type="email" name="email" id="form-email">
+                        <br>
+                        <label for="form-reference">How did you find me?</label>
+                        <select name="reference" id="form-reference">
+                            <option value="">not selected</option>
+                            <option value="social-media">Social Media</option>
+                            <option value="past-employer">Past Employer</option>
+                            <option value="search-engine">Search Engine</option>
+                            <option value="word-of-mouth">Word of Mouth</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </fieldset>
+                    <br>
+                    <fieldset id="message-fs">
+                        <legend>Message</legend>
+                            <label for="form-subject">Subject:</label>
+                            <input type="text" name="subject" id="form-subject" list="subject-list">
+                            <datalist id="subject-list">
+                                <option value="Recruitment">Recruitment</option>
+                                <option value="Past projects">Past Projects</option>
+                                <option value="Work Opportunities">Work Opportunities</option>
+                            </datalist>
+                            <br>
+                            <label for="form-message">Message:</label>
+                            <textarea name="message" id="form-message"></textarea>
+                    </fieldset>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+            </section>
         </main>
         <br>
         <hr>
